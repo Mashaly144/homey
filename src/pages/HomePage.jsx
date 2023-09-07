@@ -7,7 +7,7 @@ import Subscription from '../components/Subscription';
 
 const HomePage = () => {
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto overflow-x-hidden'>
       <Hero />
       <About />
       <Performance />
