@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f6f6f6;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+ul {
+  list-style: none;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+.main-header {
+  @apply space-y-5;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 0px;
+  background-color: #3671e9;
+  transition: all 0.3s;
+}
+.nav-link:hover::before {
+  width: 100%;
+  height: 2px;
+  background-color: #3671e9;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+.card h1 {
+  font-family: Cairo;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.card p {
+  text-align: right;
+  font-family: Cairo;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  width: 322px;
+}
+.card:hover {
+  background-color: #3671e9;
+  color: white;
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.services-cards .services-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.services-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3671e9;
+  width: fit-content;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  transition: all 0.5s;
+}
+.services-card:hover .services-icon {
+  background-color: white;
+  color: black;
+}
+
+.services-card h1 {
+  text-align: center;
+  font-family: Cairo;
+  font-size: 23.739px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.475px;
+}
+.services-card:hover {
+  background-color: #3671e9;
+  color: white;
+}
+
+.sub-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.sub-input {
+  @apply px-5 py-3;
+  width: 50%;
+  border: 2px solid rgba(51, 51, 51, 0.164);
+  border-radius: 0 20px 20px 0px;
+  outline: none;
+  background-color: white;
+  transform: translateX(-5px);
+  z-index: 0;
+}
