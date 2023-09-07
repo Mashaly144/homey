@@ -63,10 +63,11 @@ ul {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
 }
 .card {
+  @apply flex-col lg:flex-row text-center lg:text-right;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -89,13 +90,12 @@ ul {
   line-height: normal;
 }
 .card p {
-  text-align: right;
+  @apply text-center lg:text-right;
   font-family: Cairo;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  width: 322px;
 }
 .card:hover {
   background-color: #3671e9;
@@ -108,7 +108,7 @@ ul {
   gap: 20px;
 }
 
-.services-cards .services-card {
+.services-card {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -163,7 +163,7 @@ ul {
 .sub-input {
   @apply px-5 py-3;
   width: 50%;
-  border: 2px solid rgba(51, 51, 51, 0.164);
+  border: 1px solid #3671e9;
   border-radius: 0 20px 20px 0px;
   outline: none;
   background-color: white;
